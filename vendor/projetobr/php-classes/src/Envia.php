@@ -6,7 +6,7 @@ use Rain\Tpl;
 
 class Envia{
 
-	const EMAIL = "xxxxxxxxxxxxx";
+	const EMAIL = "xxxxxxxxxxxxxxx";
 	const SENHA = "xxxxxxxxx";
 	const NAME_FROM = "Centro de Artes e Eventos";
 
