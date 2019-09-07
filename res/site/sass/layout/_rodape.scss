@@ -1,0 +1,66 @@
+.rodape{
+    color: #fff;
+    .logo{
+        margin-bottom: 20px;
+    }
+    &__linha-1{
+        background-color: #272525;
+       // background-image: url("../img/rodape-bg.jpg");
+       background-color: #fbfbfb;
+       box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+        background-size: cover;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        overflow: auto;
+    }
+    &__linha-2{
+        background-color: #000;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    &__coluna{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    &__titulo{
+        border-bottom: 1px solid #000;
+        padding: 0 10px 10px 10px;
+        font-size: 18px;
+        color: #000;
+    }
+    &__lista-links{
+        padding: 0;
+        list-style: none;
+    }
+    &__lista-links__item{
+        color: #000;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__lista-links__item::before{
+        content: '>';
+        margin-right: 8px;
+        color: $cor-principal;
+    }
+    @media(min-width: $breakpoint-md){
+        &__linha-1{
+           // background-image: url("../img/rodape-bg-md.jpg");
+           background-color: #fbfbfb;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+        }
+        &__coluna{
+            float: left;
+            width: 33.333%;
+            padding: 0 15px;
+        }
+    }
+    @media(min-width: $breakpoint-md){
+        &__linha-1{
+           // background-image: url("../img/rodape-bg-xl.jpg");
+           background-color: #fbfbfb;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+        }
+    }
+}

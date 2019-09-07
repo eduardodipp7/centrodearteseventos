@@ -1,0 +1,1 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><li><a class="menu-principal__item menu-principal__item--atual" href="/portfolio">Portfolio</a></li><li><a class="menu-principal__item menu-principal__item--atual" href="/sobre">Sobre</a></li><li><a class="menu-principal__item menu-principal__item--atual" href="/contato">Contato</a></li>

@@ -1,0 +1,22 @@
+/* Logo */
+.logo{
+    background-image: url("../img/logo_principal.png");
+    background-repeat: no-repeat;
+    background-size: 278px 41px;
+    display: block;
+    width: 278px;
+    height: 53px;
+    text-indent: -9999px;
+    margin: 0;
+    
+    &--branco{
+        background-image: url("../img/logotipo-branco2.png");
+        background-repeat: no-repeat;
+        background-size: 122px 197px;
+        display: block;
+        width: 325px;
+        height: 197px;
+        text-indent: -9999px;
+        margin: 0;
+    }
+}

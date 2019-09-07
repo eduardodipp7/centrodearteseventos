@@ -1,0 +1,78 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Lista de o que fazemos
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active"><a href="/admin/fazemos/create">Cadastrar</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-success">
+        <div class="box-header with-border">
+          <h3 class="box-title">Novo Registro</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" action="/admin/fazemos/create" method="post"  enctype="multipart/form-data">
+          <div class="box-body">
+
+            <div class="form-group">
+              <label for="destitulo">Nome do titulo</label>
+              <input type="text" class="form-control" id="destitulo" name="destitulo" placeholder="Digite a informação do titulo">
+            </div>
+
+            <div class="form-group">
+              <label for="destext">Informação do texto</label>
+              <input type="text" class="form-control" id="destext" name="destext" placeholder="Digite a informação do texto">
+            </div>
+
+                 <div class="form-group">
+              <label for="file">Foto</label>
+              <input type="file" class="form-control" id="file" name="file">
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" style="width: 154px; height: 155px;">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <button type="submit" class="btn btn-success" onclick="return confirm('Olá, por padrão a foto será redimensionada pra 154 de largura e 155 de altura para seguir um padrão na visualização das fotos no site')">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<!--ESSE SCRIPT CARREGA A IMAGEM NA HORA QUE SELECIONA ESCOLHER ARQUIVO -->
+<script>
+document.querySelector('#file').addEventListener('change', function(){
+  
+  var file = new FileReader();
+
+  file.onload = function() {
+    
+    document.querySelector('#image-preview').src = file.result;
+
+  }
+
+  file.readAsDataURL(this.files[0]);
+
+});
+</script>

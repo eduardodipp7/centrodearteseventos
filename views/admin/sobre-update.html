@@ -1,0 +1,79 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Atualização das informaçoes
+  </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Editar a empresa</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" action="/admin/sobre/{$sobre.idsobre}" method="post" enctype="multipart/form-data">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="post">Nome do titulo</label>
+              <input type="text" class="form-control" id="destitulo" name="destitulo" placeholder="Digite o titulo" value="{$sobre.destitulo}">
+            </div>
+
+            <div class="form-group">
+              <label for="post">Informações da empresa</label>
+              <textarea class="form-control" id="destexto" name="destexto"  rows="10">{$sobre.destexto}</textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="file">Foto</label>
+              <input type="file" class="form-control" id="file" name="file" value="{$sobre.destitulo}">
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" src="{$sobre.desphoto}" alt="Photo">
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script>
+document.querySelector('#file').addEventListener('change', function(){
+  
+  var file = new FileReader();
+
+  file.onload = function() {
+    
+    document.querySelector('#image-preview').src = file.result;
+
+  }
+
+  file.readAsDataURL(this.files[0]);
+
+});
+</script>
+
+<script src = "https://cdn.tiny.cloud/1/ mj7xgnxyysmfooaw61pu1y8ymkf4d0wyf5t5zqo0f6wyvm40 /tinymce/5/tinymce.min.js"> </script>
+<script>
+tinymce.init({
+     selector:'textarea',
+     language: 'pt_BR'  // site absolute URL
+});
+</script>

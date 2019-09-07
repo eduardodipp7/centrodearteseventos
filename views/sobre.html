@@ -1,0 +1,14 @@
+ <article>
+             {loop="$sobre"}
+            <header class="pagina-cabecalho">
+                <h1 class="pagina-cabecalho__titulo anime">{$value.destitulo}</h1>
+            </header>
+            <section class="container pagina-conteudo">
+                <h2 class="text-center"></h2>
+                <img src="{$value.desphoto}" class="img-left-md">
+                  <div id="servicos__texto">
+                {function="FormataEditor($value.destexto)"}
+            </div>
+            </section>
+            {/loop}
+        </article>

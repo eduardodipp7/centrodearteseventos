@@ -1,0 +1,26 @@
+  <header class="pagina-cabecalho">
+            {loop="$port"}
+            <h1 class="pagina-cabecalho__titulo anime">{$value.destitulo}</h1>
+        </header>
+        <section class="pagina-conteudo">
+            <div id="servicos__texto">
+          {function="FormataEditor($value.destexto)"}
+      </div>
+
+            <nav>
+                {/loop}
+                <ul class="lista-trabalhos">
+                   {loop="$fotos"}
+                    <li class="lista-trabalhos__item anime">
+                        <a data-fancybox="gallery" href="{$value.desphoto}">
+                            <img class="lista-trabalhos__img" src="{$value.desphoto}" alt="">
+                            <h2 class="lista-trabalhos__titulo">{$value.desfoto}</h2>
+                        
+                        </a>
+                    </li>
+                    {/loop}
+                </ul>
+            </nav>
+        </section>
+
+    
